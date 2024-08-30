@@ -1,10 +1,22 @@
 import './App.css';
-import Counter from './components/Counter/Counter';
+import ProductReducer from './components/ProductReducer/ProductReducer';
+// import ProductState from './components/ProductState/ProductState';
+// import CounterReducer from './components/CounterReducer/CounterReducer';
+// import CounterState from './components/CounterState/CounterState';
+// import Counter from './components/Counter/Counter';
 
 function App() {
   return (
     <>
-      <Counter />
+      {/* <Counter /> */}
+
+      {/* <CounterState /> */}
+
+      {/* <CounterReducer /> */}
+
+      {/* <ProductState /> */}
+
+      <ProductReducer />
     </>
   );
 }
