@@ -1,7 +1,7 @@
 import './App.css';
-import Todos from './components/Todos/Todos';
+// import Todos from './components/Todos/Todos';
 // import ProductReducer from './components/ProductReducer/ProductReducer';
-// import ProductState from './components/ProductState/ProductState';
+import ProductState from './components/ProductState/ProductState';
 // import CounterReducer from './components/CounterReducer/CounterReducer';
 // import CounterState from './components/CounterState/CounterState';
 // import Counter from './components/Counter/Counter';
@@ -15,11 +15,11 @@ function App() {
 
       {/* <CounterReducer /> */}
 
-      {/* <ProductState /> */}
+      <ProductState />
 
       {/* <ProductReducer /> */}
 
-      <Todos />
+      {/* <Todos /> */}
     </>
   );
 }

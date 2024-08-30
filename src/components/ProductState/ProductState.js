@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+import './ProductState.scss';
 
 function ProductState() {
   const [products, setProducts] = useState([]);
@@ -16,22 +19,29 @@ function ProductState() {
 
     setTimeout(() => {
       fetchApi();
-    }, 3000)
+    }, 5000)
 
   }, []);
-
-  console.log(loading);
-  console.log(products);
   return (
     <>
       {loading ? (
-        <div>Loading data</div>
-      ) : (
-        <ul>
-          {products.map(item => (
-            <li key={item.id}>{item.title}</li>
+        <div className='product__list'>
+          {[...Array(6)].map((_, index) => (
+            <div className='product__item' key={index}>
+              <Skeleton className='product__image' />
+              <Skeleton className='product__title' />
+            </div>
           ))}
-        </ul>
+        </div>
+      ) : (
+        <div className='product__list'>
+          {products.map(item => (
+            <div className='product__item' key={item.id}>
+              <img className='product__image' src={item.thumbnail} alt={item.title}></img>
+              <h3 className='product__title'>{item.title}</h3>
+            </div>
+          ))}
+        </div>
       )}
     </>
   );
